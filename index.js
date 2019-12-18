@@ -3,7 +3,7 @@ const http = require('http').createServer(app);
 const port = 5000;
 
 app.get('/', (req,res) => {
-    res.send('<h2>Hello world</h2>');
+    res.sendFile(__dirname+'/index.html');
 })
 
 http.listen(port, () => (console.log(`Listening on * ${port}`)));
